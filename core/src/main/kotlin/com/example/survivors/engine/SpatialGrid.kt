@@ -26,7 +26,7 @@ class SpatialGrid(
         }
     }
 
-    inline fun query(x: Float, y: Float, radius: Float, callback: (Int) -> Unit) {
+    fun query(x: Float, y: Float, radius: Float, callback: (Int) -> Unit) {
         val minX = floor((x - radius + worldHalf) / cellSize).toInt().coerceIn(0, widthCells - 1)
         val maxX = floor((x + radius + worldHalf) / cellSize).toInt().coerceIn(0, widthCells - 1)
         val minY = floor((y - radius + worldHalf) / cellSize).toInt().coerceIn(0, heightCells - 1)
