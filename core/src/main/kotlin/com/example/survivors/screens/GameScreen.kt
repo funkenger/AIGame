@@ -37,7 +37,7 @@ class GameScreen(game: SurvivorsGame) : BaseScreen(game) {
                 return ui.touch(v.x, v.y)
             }
         }
-        Gdx.input.isCatchKey(Input.Keys.BACK, true)
+        Gdx.input.setCatchKey(Input.Keys.BACK, true)
     }
 
     override fun render(delta: Float) {
